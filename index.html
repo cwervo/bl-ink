@@ -13,9 +13,28 @@
     <script src="/script.js" defer></script>
   </head>  
   <body>
-    <h1>Hi there!</h1>
+    <h1>The <bl-ink>&lt;bl-ink&gt;</bl-ink> element</h1>
     
-    <bl-ink>blinky blinky text</bl-ink>
+    <p>
+      This is some <bl-ink data-duration="0.25s">normal blinking text</bl-ink>.
+    </p>
+
+    <p>
+      This text is some <bl-ink class="big-text slower" style="color:peachpuff">big, <code>peachpuff</code> colored, &amp; slower blinking text</bl-ink>
+    </p>
+    
+    Slower code:
+    
+    <pre>
+    <code>
+    // HTML:
+    &lt;bl-ink class="big-text slower" style="color:peachpuff"&gt;big, &lt;code&gt;peachpuff&lt;/code&gt; blinking text&lt;/bl-ink&gt;
+    // CSS:
+    .slower {
+      --blink-animation-duration: 1s;
+    }
+    </code>
+    </pre>
 
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
